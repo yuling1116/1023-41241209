@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  
+  #gameCanvasContainer {
+    margin: 20px auto;
+  }
+  
+  canvas {
+    background-color: #eee;
+    border: 1px solid #000;
+  }
+  
+  h1 {
+    color: #333;
+  }
+  
+  button {
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+  }
+  
+  #difficultySelector {
+    margin-top: 20px;
+  }
+  
+  #gameOver {
+    margin-top: 20px;
+  }
+  

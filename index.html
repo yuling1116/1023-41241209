@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>打磚塊遊戲</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+        #gameCanvas {
+            background-color: #eee;
+            display: block;
+            margin-bottom: 20px;
+        }
+        #difficultySelector, #gameOver {
+            text-align: center;
+        }
+        #gameOver {
+            display: none;
+        }
+        #restartButton {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="difficultySelector">
+        <h1>選擇難度</h1>
+        <button onclick="startGame('easy')">簡單</button>
+        <button onclick="startGame('medium')">中等</button>
+        <button onclick="startGame('hard')">困難</button>
+    </div>
+
+    <div id="gameContainer" style="display: none;">
+        <canvas id="gameCanvas" width="480" height="320"></canvas>
+        <div id="scorePanel">
+            <p>得分: <span id="score">0</span></p>
+            <p>生命: <span id="lives">3</span></p>
+        </div>
+        <div id="gameOver">
+            <h2>遊戲結束</h2>
+            <p>最終得分: <span id="finalScore"></span></p>
+            <button id="restartButton" onclick="restartGame()">重新開始</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
